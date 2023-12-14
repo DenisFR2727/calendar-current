@@ -161,12 +161,12 @@
         width: 30px;
         height: 30px;
     }
-    .day_names li :nth-child(1) {
+    .day_names li:nth-child(1) {
         color: black;
         font-size: 17px;
         font-weight: 700;
       }
-    .day_names li :nth-child(2) {
+    .day_names li:nth-child(2) {
         position: absolute;
         top: -5px;
         font-size: 10px;
@@ -203,7 +203,7 @@
         width: 30px;
         height: 30px;
     }
-    .day_names li :nth-child(1) {
+    .day_names li:nth-child(1) {
         color: black;
         font-size: 17px;
         font-weight: 700;
@@ -220,6 +220,86 @@
       }
       .current-info-calendar{
         margin-top: 25px;
+      }
+      .current-info-calendar h1 {
+        font-size: 20px;
+        color: blue;
+      }
+      .current-info-calendar h2 {
+        font-size: 20px;
+        color: blue;
+      }
+}
+/* 360 -800 */
+@media screen and (min-width:360px) and (max-width: 600px) {
+    .calendar{
+        width: 350px;
+        height: 900px;
+    }
+    h1{ 
+        margin-top: 18px;
+        height: 12px;
+        font-size: 15px;
+    }
+    h2{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    .prev-month-cicle{
+        border: 0;
+    }
+    .next-month-cicle{
+        border: 0;
+    }
+    .year {
+        font-weight: 600;
+    }
+    .day{
+        font-weight: 600;
+    }
+    .month {
+        font-weight: 600;
+    }
+    .hours {
+        border: 1px solid blue;
+        font-weight: 600;
+    }
+    .day_names{
+        margin-top: 25px;
+    }
+    .day_names li {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc(50% - 5px);
+        width: 30px;
+        height: 30px;
+    }
+    .day_names li:nth-child(1) {
+        color: black;
+        font-size: 17px;
+        font-weight: 700;
+      }
+    .day_names li:nth-child(2) {
+        position: absolute;
+        top: -5px;
+        font-size: 10px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap; 
+        max-width: 25px;
+      }
+      .navigation-buttons {
+        border: 1px solid blue;
+      }
+      .current-info-calendar{
+        position: relative;
+        top: 40px;
+        margin-top: 85px;
+        
       }
       .current-info-calendar h1 {
         font-size: 20px;

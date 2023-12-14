@@ -18,11 +18,10 @@ export default function DatePickerView({
     <div className="calendar">
         <div className='current-info-calendar'>
             <div>
-            <h1>Year: {currentYear}</h1>
+            <h1 className='year'>Year: {currentYear}</h1>
             <hr />
-            <h2>
-                    Month:{' '}
-                {currentMonthView}
+            <h2 className='month'>
+                    Month: {currentMonthView}
             </h2>
             <div className="navigation-buttons">
                 <div className='prev-month-cicle'>
