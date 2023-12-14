@@ -1,0 +1,232 @@
+.calendar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0 auto;
+    /* justify-content: center;
+    align-items: center; */
+    border: 2px solid black;
+    background: cyan;
+}
+.current-info-calendar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.day_names {
+    margin: 0 auto;
+    max-width: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* проміжок між блоками */
+  }
+
+  .day_names li {
+    position: relative;
+    flex: 1 0 calc(14.2857% - 5px); 
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    list-style: none;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+    box-sizing: border-box;
+    background: rgba(82, 82, 205, 0.707);
+    color: rgb(8, 232, 173);
+    border-radius: 2px 2px 2px 2px;
+  }
+  
+  .current_day_calendar {
+    background-color: red !important;
+    box-shadow: 2px 2px 2px 2px rgb(55, 55, 117);
+  }
+  
+  .day_names li :nth-child(1) {
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    color: black;
+    font-size: 15px;
+  }
+  .day_names li :nth-child(2) {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  .navigation-buttons{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation-buttons span {
+    font-size: 20px;
+    color: blue;
+  }
+  .next-month {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .prev-month {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .prev-month-cicle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 3px solid  blue;
+  }
+  .prev-month-cicle :hover {
+    background: rgb(55, 55, 117);
+    border-radius: 100%;
+  }
+  .next-month-cicle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 3px solid  blue;
+  }
+  .next-month-cicle :hover {
+    background: rgb(55, 55, 117);
+    border-radius: 100%;
+  }
+  hr {
+    color: rgb(55, 55, 117);
+  }
+  .day :nth-child(2) {
+    color: red;
+  }
+  @media screen and (max-width: 500px) {
+    .day_names li {
+      flex-basis: calc(33.3333% - 5px); 
+    }
+  }
+  /* 390 - 844 */
+  @media screen and (min-width:390px) and (max-width: 844px) {
+    .calendar{
+        width: 350px;
+        height: 900px;
+    }
+    .day_names li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc(50% - 5px);
+        width: 30px;
+        height: 30px;
+    }
+    .day_names li :nth-child(1) {
+        position: absolute;
+        left: 4px;
+        top: 10px;
+        color: black;
+        font-size: 20px;
+      }
+    .day_names li :nth-child(2) {
+        position: absolute;
+        top: -5px;
+        font-size: 10px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Додаємо мітку, що текст обрізаний */
+        white-space: nowrap; /* Забороняємо перенос тексту на новий рядок */
+        max-width: 25px;
+        font-size: 20px;
+      }
+}
+/* 375 - 812 */
+@media screen and (min-width:375px) and (max-width: 812px) {
+    .calendar{
+        width: 350px;
+        height: 900px;
+    }
+    .day_names li {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc(50% - 5px);
+        width: 30px;
+        height: 30px;
+    }
+    .day_names li :nth-child(1) {
+        color: black;
+        font-size: 17px;
+        font-weight: 700;
+      }
+    .day_names li :nth-child(2) {
+        position: absolute;
+        top: -5px;
+        font-size: 10px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap; 
+        max-width: 25px;
+      }
+      .current-info-calendar{
+        margin-top: 25px;
+      }
+      .current-info-calendar h1 {
+        font-size: 20px;
+        color: blue;
+      }
+      .current-info-calendar h2 {
+        font-size: 20px;
+        color: blue;
+      }
+}
+/* 360-800 */
+@media screen and (min-width:360px) and (max-width: 800px) {
+    .calendar{
+        width: 350px;
+        height: 900px;
+    }
+    .day_names li {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc(50% - 5px);
+        width: 30px;
+        height: 30px;
+    }
+    .day_names li :nth-child(1) {
+        color: black;
+        font-size: 17px;
+        font-weight: 700;
+      }
+    .day_names li :nth-child(2) {
+        position: absolute;
+        top: -5px;
+        font-size: 10px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap; 
+        max-width: 25px;
+      }
+      .current-info-calendar{
+        margin-top: 25px;
+      }
+      .current-info-calendar h1 {
+        font-size: 20px;
+        color: blue;
+      }
+      .current-info-calendar h2 {
+        font-size: 20px;
+        color: blue;
+      }
+}
